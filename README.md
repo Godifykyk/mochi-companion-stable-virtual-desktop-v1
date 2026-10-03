@@ -27,7 +27,13 @@ An eyes-only Linux desktop companion with 120 original anime-inspired moods, twe
 
 ## Download
 
-Download the ZIP or tarball from the GitHub Releases page, then extract it:
+Verified v1.0.0 archives and checksums are stored in `release-assets/v1.0.0/`:
+
+- `mochi-companion-stable-v1.0.0.zip`
+- `mochi-companion-stable-v1.0.0.tar.gz`
+- `SHA256SUMS`
+
+Download the ZIP or tarball, then extract it:
 
 ```bash
 unzip mochi-companion-stable-v1.0.0.zip
