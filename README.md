@@ -2,6 +2,10 @@
 
 An eyes-only Linux desktop companion with 120 original anime-inspired moods, twelve white-and-blue GIF exports, low-power SVG/frame animation, and native adapters for Noctalia, KDE Plasma 6, and GNOME Shell 45+. A portable GTK3/layer-shell application is included for Niri, Hyprland, Sway, X11 desktops, and generic fallback use.
 
+## Mochi preview
+
+![Mochi Companion showing its happy expression](docs/images/mochi-preview.png)
+
 ## Features
 
 - 120 original animated moods and expression sequences.
