@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="30" viewBox="0 0 72 30">
+<defs>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.35" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#171D28"/><stop offset="1" stop-color="#070A0F"/></linearGradient>
+</defs>
+<rect x="0.7" y="0.7" width="70.6" height="28.6" rx="10" fill="url(#body)" stroke="#73809A" stroke-opacity=".35" stroke-width="1.4"/>
+<ellipse cx="36" cy="26.5" rx="25" ry="1.2" fill="#7EF0FF" opacity=".10"/>
+<g filter="url(#glow)" fill="#F7FBFF" stroke="#F7FBFF" stroke-linecap="round" stroke-linejoin="round"><path d="M17 15 Q23 18 29 15" fill="none" stroke-width="3"/><path d="M43 15 Q49 18 55 15" fill="none" stroke-width="3"/></g>
+</svg>

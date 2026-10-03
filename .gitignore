@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+dist/
+*.tar.gz
+*.zip
+.DS_Store
+.idea/
+.vscode/
+.source-commit
+.source-status

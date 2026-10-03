@@ -1,0 +1,12 @@
+[[plugin]]
+id = "kanha/mochi-eyes"
+name = "Mochi Eyes"
+version = "1.0.0"
+updated_at = 1790958125
+added_at = 1790953207
+author = "kanha"
+license = "MIT"
+icon = "sparkles"
+description = "A tiny Dasai Mochi-inspired expressive robot that lives in the Noctalia bar."
+plugin_api = 32
+tags = ["fun", "animation", "companion", "bar"]

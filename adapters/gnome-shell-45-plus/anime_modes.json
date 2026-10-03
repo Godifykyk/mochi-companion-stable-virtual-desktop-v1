@@ -1,0 +1,1578 @@
+{
+  "frames": {
+    "neutral": [
+      "●",
+      "●",
+      "#FFFFFF"
+    ],
+    "blink": [
+      "━",
+      "━",
+      "#FFFFFF"
+    ],
+    "look-left": [
+      "◉",
+      "●",
+      "#53C7FF"
+    ],
+    "look-right": [
+      "●",
+      "◉",
+      "#53C7FF"
+    ],
+    "happy": [
+      "⌒",
+      "⌒",
+      "#53C7FF"
+    ],
+    "love": [
+      "♥",
+      "♥",
+      "#53C7FF"
+    ],
+    "sleepy": [
+      "—",
+      "—",
+      "#FFFFFF"
+    ],
+    "angry": [
+      "◣",
+      "◢",
+      "#53C7FF"
+    ],
+    "sad": [
+      "╯",
+      "╰",
+      "#FFFFFF"
+    ],
+    "surprised": [
+      "○",
+      "○",
+      "#53C7FF"
+    ],
+    "wink": [
+      "⌒",
+      "●",
+      "#53C7FF"
+    ],
+    "focused": [
+      "▰",
+      "▰",
+      "#FFFFFF"
+    ],
+    "sparkle": [
+      "✦",
+      "✦",
+      "#53C7FF"
+    ],
+    "stars": [
+      "★",
+      "★",
+      "#53C7FF"
+    ],
+    "power": [
+      "◆",
+      "◆",
+      "#53C7FF"
+    ],
+    "rage": [
+      "╲",
+      "╱",
+      "#53C7FF"
+    ],
+    "dizzy": [
+      "×",
+      "×",
+      "#FFFFFF"
+    ],
+    "teary": [
+      "◉",
+      "◉",
+      "#53C7FF"
+    ],
+    "shy": [
+      "•",
+      "•",
+      "#53C7FF"
+    ],
+    "smirk": [
+      "⌁",
+      "⌁",
+      "#FFFFFF"
+    ],
+    "dash": [
+      "◀",
+      "▶",
+      "#53C7FF"
+    ],
+    "comedy": [
+      "@",
+      "@",
+      "#53C7FF"
+    ],
+    "confetti": [
+      "✧",
+      "✧",
+      "#53C7FF"
+    ],
+    "aura": [
+      "◇",
+      "◇",
+      "#53C7FF"
+    ]
+  },
+  "modes": [
+    {
+      "id": "power-surge-opening",
+      "title": "Power Surge — Opening",
+      "sequence": [
+        "focused",
+        "neutral",
+        "power",
+        "aura",
+        "rage"
+      ]
+    },
+    {
+      "id": "power-surge-build-up",
+      "title": "Power Surge — Build-up",
+      "sequence": [
+        "power",
+        "focused",
+        "aura",
+        "rage",
+        "focused"
+      ]
+    },
+    {
+      "id": "power-surge-climax",
+      "title": "Power Surge — Climax",
+      "sequence": [
+        "aura",
+        "power",
+        "rage",
+        "focused",
+        "power"
+      ],
+      "gif": "assets/gifs/power-surge.gif",
+      "animation_frames": [
+        "assets/animation-frames/power-surge/00.svg",
+        "assets/animation-frames/power-surge/01.svg",
+        "assets/animation-frames/power-surge/02.svg",
+        "assets/animation-frames/power-surge/03.svg",
+        "assets/animation-frames/power-surge/04.svg",
+        "assets/animation-frames/power-surge/05.svg",
+        "assets/animation-frames/power-surge/06.svg",
+        "assets/animation-frames/power-surge/07.svg"
+      ]
+    },
+    {
+      "id": "power-surge-reaction",
+      "title": "Power Surge — Reaction",
+      "sequence": [
+        "rage",
+        "surprised",
+        "focused",
+        "power",
+        "aura"
+      ]
+    },
+    {
+      "id": "power-surge-calm-after",
+      "title": "Power Surge — Calm After",
+      "sequence": [
+        "focused",
+        "sleepy",
+        "power",
+        "aura",
+        "rage"
+      ]
+    },
+    {
+      "id": "power-surge-encore",
+      "title": "Power Surge — Encore",
+      "sequence": [
+        "power",
+        "sparkle",
+        "aura",
+        "rage",
+        "focused"
+      ]
+    },
+    {
+      "id": "final-stand-opening",
+      "title": "Final Stand — Opening",
+      "sequence": [
+        "sad",
+        "neutral",
+        "focused",
+        "rage",
+        "power"
+      ]
+    },
+    {
+      "id": "final-stand-build-up",
+      "title": "Final Stand — Build-up",
+      "sequence": [
+        "focused",
+        "focused",
+        "rage",
+        "power",
+        "sad"
+      ]
+    },
+    {
+      "id": "final-stand-climax",
+      "title": "Final Stand — Climax",
+      "sequence": [
+        "rage",
+        "power",
+        "power",
+        "sad",
+        "focused"
+      ],
+      "gif": "assets/gifs/final-stand.gif",
+      "animation_frames": [
+        "assets/animation-frames/final-stand/00.svg",
+        "assets/animation-frames/final-stand/01.svg",
+        "assets/animation-frames/final-stand/02.svg",
+        "assets/animation-frames/final-stand/03.svg",
+        "assets/animation-frames/final-stand/04.svg",
+        "assets/animation-frames/final-stand/05.svg",
+        "assets/animation-frames/final-stand/06.svg",
+        "assets/animation-frames/final-stand/07.svg"
+      ]
+    },
+    {
+      "id": "final-stand-reaction",
+      "title": "Final Stand — Reaction",
+      "sequence": [
+        "power",
+        "surprised",
+        "sad",
+        "focused",
+        "rage"
+      ]
+    },
+    {
+      "id": "final-stand-calm-after",
+      "title": "Final Stand — Calm After",
+      "sequence": [
+        "sad",
+        "sleepy",
+        "focused",
+        "rage",
+        "power"
+      ]
+    },
+    {
+      "id": "final-stand-encore",
+      "title": "Final Stand — Encore",
+      "sequence": [
+        "focused",
+        "sparkle",
+        "rage",
+        "power",
+        "sad"
+      ]
+    },
+    {
+      "id": "rival-glare-opening",
+      "title": "Rival Glare — Opening",
+      "sequence": [
+        "look-left",
+        "neutral",
+        "smirk",
+        "angry",
+        "focused"
+      ]
+    },
+    {
+      "id": "rival-glare-build-up",
+      "title": "Rival Glare — Build-up",
+      "sequence": [
+        "smirk",
+        "focused",
+        "angry",
+        "focused",
+        "look-left"
+      ]
+    },
+    {
+      "id": "rival-glare-climax",
+      "title": "Rival Glare — Climax",
+      "sequence": [
+        "angry",
+        "power",
+        "focused",
+        "look-left",
+        "smirk"
+      ]
+    },
+    {
+      "id": "rival-glare-reaction",
+      "title": "Rival Glare — Reaction",
+      "sequence": [
+        "focused",
+        "surprised",
+        "look-left",
+        "smirk",
+        "angry"
+      ]
+    },
+    {
+      "id": "rival-glare-calm-after",
+      "title": "Rival Glare — Calm After",
+      "sequence": [
+        "look-left",
+        "sleepy",
+        "smirk",
+        "angry",
+        "focused"
+      ]
+    },
+    {
+      "id": "rival-glare-encore",
+      "title": "Rival Glare — Encore",
+      "sequence": [
+        "smirk",
+        "sparkle",
+        "angry",
+        "focused",
+        "look-left"
+      ]
+    },
+    {
+      "id": "comedy-panic-opening",
+      "title": "Comedy Panic — Opening",
+      "sequence": [
+        "surprised",
+        "neutral",
+        "comedy",
+        "dizzy",
+        "blink"
+      ]
+    },
+    {
+      "id": "comedy-panic-build-up",
+      "title": "Comedy Panic — Build-up",
+      "sequence": [
+        "comedy",
+        "focused",
+        "dizzy",
+        "blink",
+        "surprised"
+      ]
+    },
+    {
+      "id": "comedy-panic-climax",
+      "title": "Comedy Panic — Climax",
+      "sequence": [
+        "dizzy",
+        "power",
+        "blink",
+        "surprised",
+        "comedy"
+      ],
+      "gif": "assets/gifs/comedy-panic.gif",
+      "animation_frames": [
+        "assets/animation-frames/comedy-panic/00.svg",
+        "assets/animation-frames/comedy-panic/01.svg",
+        "assets/animation-frames/comedy-panic/02.svg",
+        "assets/animation-frames/comedy-panic/03.svg",
+        "assets/animation-frames/comedy-panic/04.svg",
+        "assets/animation-frames/comedy-panic/05.svg",
+        "assets/animation-frames/comedy-panic/06.svg",
+        "assets/animation-frames/comedy-panic/07.svg"
+      ]
+    },
+    {
+      "id": "comedy-panic-reaction",
+      "title": "Comedy Panic — Reaction",
+      "sequence": [
+        "blink",
+        "surprised",
+        "surprised",
+        "comedy",
+        "dizzy"
+      ]
+    },
+    {
+      "id": "comedy-panic-calm-after",
+      "title": "Comedy Panic — Calm After",
+      "sequence": [
+        "surprised",
+        "sleepy",
+        "comedy",
+        "dizzy",
+        "blink"
+      ]
+    },
+    {
+      "id": "comedy-panic-encore",
+      "title": "Comedy Panic — Encore",
+      "sequence": [
+        "comedy",
+        "sparkle",
+        "dizzy",
+        "blink",
+        "surprised"
+      ]
+    },
+    {
+      "id": "friendship-spark-opening",
+      "title": "Friendship Spark — Opening",
+      "sequence": [
+        "shy",
+        "neutral",
+        "happy",
+        "sparkle",
+        "love"
+      ]
+    },
+    {
+      "id": "friendship-spark-build-up",
+      "title": "Friendship Spark — Build-up",
+      "sequence": [
+        "happy",
+        "focused",
+        "sparkle",
+        "love",
+        "shy"
+      ]
+    },
+    {
+      "id": "friendship-spark-climax",
+      "title": "Friendship Spark — Climax",
+      "sequence": [
+        "sparkle",
+        "power",
+        "love",
+        "shy",
+        "happy"
+      ],
+      "gif": "assets/gifs/friendship-spark.gif",
+      "animation_frames": [
+        "assets/animation-frames/friendship-spark/00.svg",
+        "assets/animation-frames/friendship-spark/01.svg",
+        "assets/animation-frames/friendship-spark/02.svg",
+        "assets/animation-frames/friendship-spark/03.svg",
+        "assets/animation-frames/friendship-spark/04.svg",
+        "assets/animation-frames/friendship-spark/05.svg",
+        "assets/animation-frames/friendship-spark/06.svg",
+        "assets/animation-frames/friendship-spark/07.svg"
+      ]
+    },
+    {
+      "id": "friendship-spark-reaction",
+      "title": "Friendship Spark — Reaction",
+      "sequence": [
+        "love",
+        "surprised",
+        "shy",
+        "happy",
+        "sparkle"
+      ]
+    },
+    {
+      "id": "friendship-spark-calm-after",
+      "title": "Friendship Spark — Calm After",
+      "sequence": [
+        "shy",
+        "sleepy",
+        "happy",
+        "sparkle",
+        "love"
+      ]
+    },
+    {
+      "id": "friendship-spark-encore",
+      "title": "Friendship Spark — Encore",
+      "sequence": [
+        "happy",
+        "sparkle",
+        "sparkle",
+        "love",
+        "shy"
+      ]
+    },
+    {
+      "id": "victory-pose-opening",
+      "title": "Victory Pose — Opening",
+      "sequence": [
+        "focused",
+        "neutral",
+        "happy",
+        "stars",
+        "confetti"
+      ]
+    },
+    {
+      "id": "victory-pose-build-up",
+      "title": "Victory Pose — Build-up",
+      "sequence": [
+        "happy",
+        "focused",
+        "stars",
+        "confetti",
+        "focused"
+      ]
+    },
+    {
+      "id": "victory-pose-climax",
+      "title": "Victory Pose — Climax",
+      "sequence": [
+        "stars",
+        "power",
+        "confetti",
+        "focused",
+        "happy"
+      ],
+      "gif": "assets/gifs/victory-pose.gif",
+      "animation_frames": [
+        "assets/animation-frames/victory-pose/00.svg",
+        "assets/animation-frames/victory-pose/01.svg",
+        "assets/animation-frames/victory-pose/02.svg",
+        "assets/animation-frames/victory-pose/03.svg",
+        "assets/animation-frames/victory-pose/04.svg",
+        "assets/animation-frames/victory-pose/05.svg",
+        "assets/animation-frames/victory-pose/06.svg",
+        "assets/animation-frames/victory-pose/07.svg"
+      ]
+    },
+    {
+      "id": "victory-pose-reaction",
+      "title": "Victory Pose — Reaction",
+      "sequence": [
+        "confetti",
+        "surprised",
+        "focused",
+        "happy",
+        "stars"
+      ]
+    },
+    {
+      "id": "victory-pose-calm-after",
+      "title": "Victory Pose — Calm After",
+      "sequence": [
+        "focused",
+        "sleepy",
+        "happy",
+        "stars",
+        "confetti"
+      ]
+    },
+    {
+      "id": "victory-pose-encore",
+      "title": "Victory Pose — Encore",
+      "sequence": [
+        "happy",
+        "sparkle",
+        "stars",
+        "confetti",
+        "focused"
+      ]
+    },
+    {
+      "id": "training-focus-opening",
+      "title": "Training Focus — Opening",
+      "sequence": [
+        "blink",
+        "neutral",
+        "focused",
+        "dash",
+        "power"
+      ]
+    },
+    {
+      "id": "training-focus-build-up",
+      "title": "Training Focus — Build-up",
+      "sequence": [
+        "focused",
+        "focused",
+        "dash",
+        "power",
+        "blink"
+      ]
+    },
+    {
+      "id": "training-focus-climax",
+      "title": "Training Focus — Climax",
+      "sequence": [
+        "dash",
+        "power",
+        "power",
+        "blink",
+        "focused"
+      ]
+    },
+    {
+      "id": "training-focus-reaction",
+      "title": "Training Focus — Reaction",
+      "sequence": [
+        "power",
+        "surprised",
+        "blink",
+        "focused",
+        "dash"
+      ]
+    },
+    {
+      "id": "training-focus-calm-after",
+      "title": "Training Focus — Calm After",
+      "sequence": [
+        "blink",
+        "sleepy",
+        "focused",
+        "dash",
+        "power"
+      ]
+    },
+    {
+      "id": "training-focus-encore",
+      "title": "Training Focus — Encore",
+      "sequence": [
+        "focused",
+        "sparkle",
+        "dash",
+        "power",
+        "blink"
+      ]
+    },
+    {
+      "id": "sudden-shock-opening",
+      "title": "Sudden Shock — Opening",
+      "sequence": [
+        "neutral",
+        "neutral",
+        "surprised",
+        "comedy",
+        "dizzy"
+      ]
+    },
+    {
+      "id": "sudden-shock-build-up",
+      "title": "Sudden Shock — Build-up",
+      "sequence": [
+        "surprised",
+        "focused",
+        "comedy",
+        "dizzy",
+        "neutral"
+      ]
+    },
+    {
+      "id": "sudden-shock-climax",
+      "title": "Sudden Shock — Climax",
+      "sequence": [
+        "comedy",
+        "power",
+        "dizzy",
+        "neutral",
+        "surprised"
+      ],
+      "gif": "assets/gifs/sudden-shock.gif",
+      "animation_frames": [
+        "assets/animation-frames/sudden-shock/00.svg",
+        "assets/animation-frames/sudden-shock/01.svg",
+        "assets/animation-frames/sudden-shock/02.svg",
+        "assets/animation-frames/sudden-shock/03.svg",
+        "assets/animation-frames/sudden-shock/04.svg",
+        "assets/animation-frames/sudden-shock/05.svg",
+        "assets/animation-frames/sudden-shock/06.svg",
+        "assets/animation-frames/sudden-shock/07.svg"
+      ]
+    },
+    {
+      "id": "sudden-shock-reaction",
+      "title": "Sudden Shock — Reaction",
+      "sequence": [
+        "dizzy",
+        "surprised",
+        "neutral",
+        "surprised",
+        "comedy"
+      ]
+    },
+    {
+      "id": "sudden-shock-calm-after",
+      "title": "Sudden Shock — Calm After",
+      "sequence": [
+        "neutral",
+        "sleepy",
+        "surprised",
+        "comedy",
+        "dizzy"
+      ]
+    },
+    {
+      "id": "sudden-shock-encore",
+      "title": "Sudden Shock — Encore",
+      "sequence": [
+        "surprised",
+        "sparkle",
+        "comedy",
+        "dizzy",
+        "neutral"
+      ]
+    },
+    {
+      "id": "secret-plan-opening",
+      "title": "Secret Plan — Opening",
+      "sequence": [
+        "look-left",
+        "neutral",
+        "look-right",
+        "smirk",
+        "wink"
+      ]
+    },
+    {
+      "id": "secret-plan-build-up",
+      "title": "Secret Plan — Build-up",
+      "sequence": [
+        "look-right",
+        "focused",
+        "smirk",
+        "wink",
+        "look-left"
+      ]
+    },
+    {
+      "id": "secret-plan-climax",
+      "title": "Secret Plan — Climax",
+      "sequence": [
+        "smirk",
+        "power",
+        "wink",
+        "look-left",
+        "look-right"
+      ]
+    },
+    {
+      "id": "secret-plan-reaction",
+      "title": "Secret Plan — Reaction",
+      "sequence": [
+        "wink",
+        "surprised",
+        "look-left",
+        "look-right",
+        "smirk"
+      ]
+    },
+    {
+      "id": "secret-plan-calm-after",
+      "title": "Secret Plan — Calm After",
+      "sequence": [
+        "look-left",
+        "sleepy",
+        "look-right",
+        "smirk",
+        "wink"
+      ]
+    },
+    {
+      "id": "secret-plan-encore",
+      "title": "Secret Plan — Encore",
+      "sequence": [
+        "look-right",
+        "sparkle",
+        "smirk",
+        "wink",
+        "look-left"
+      ]
+    },
+    {
+      "id": "heroic-arrival-opening",
+      "title": "Heroic Arrival — Opening",
+      "sequence": [
+        "dash",
+        "neutral",
+        "focused",
+        "power",
+        "happy"
+      ]
+    },
+    {
+      "id": "heroic-arrival-build-up",
+      "title": "Heroic Arrival — Build-up",
+      "sequence": [
+        "focused",
+        "focused",
+        "power",
+        "happy",
+        "dash"
+      ]
+    },
+    {
+      "id": "heroic-arrival-climax",
+      "title": "Heroic Arrival — Climax",
+      "sequence": [
+        "power",
+        "power",
+        "happy",
+        "dash",
+        "focused"
+      ]
+    },
+    {
+      "id": "heroic-arrival-reaction",
+      "title": "Heroic Arrival — Reaction",
+      "sequence": [
+        "happy",
+        "surprised",
+        "dash",
+        "focused",
+        "power"
+      ]
+    },
+    {
+      "id": "heroic-arrival-calm-after",
+      "title": "Heroic Arrival — Calm After",
+      "sequence": [
+        "dash",
+        "sleepy",
+        "focused",
+        "power",
+        "happy"
+      ]
+    },
+    {
+      "id": "heroic-arrival-encore",
+      "title": "Heroic Arrival — Encore",
+      "sequence": [
+        "focused",
+        "sparkle",
+        "power",
+        "happy",
+        "dash"
+      ]
+    },
+    {
+      "id": "magical-awakening-opening",
+      "title": "Magical Awakening — Opening",
+      "sequence": [
+        "sleepy",
+        "neutral",
+        "sparkle",
+        "aura",
+        "stars"
+      ]
+    },
+    {
+      "id": "magical-awakening-build-up",
+      "title": "Magical Awakening — Build-up",
+      "sequence": [
+        "sparkle",
+        "focused",
+        "aura",
+        "stars",
+        "sleepy"
+      ]
+    },
+    {
+      "id": "magical-awakening-climax",
+      "title": "Magical Awakening — Climax",
+      "sequence": [
+        "aura",
+        "power",
+        "stars",
+        "sleepy",
+        "sparkle"
+      ],
+      "gif": "assets/gifs/magical-awakening.gif",
+      "animation_frames": [
+        "assets/animation-frames/magical-awakening/00.svg",
+        "assets/animation-frames/magical-awakening/01.svg",
+        "assets/animation-frames/magical-awakening/02.svg",
+        "assets/animation-frames/magical-awakening/03.svg",
+        "assets/animation-frames/magical-awakening/04.svg",
+        "assets/animation-frames/magical-awakening/05.svg",
+        "assets/animation-frames/magical-awakening/06.svg",
+        "assets/animation-frames/magical-awakening/07.svg"
+      ]
+    },
+    {
+      "id": "magical-awakening-reaction",
+      "title": "Magical Awakening — Reaction",
+      "sequence": [
+        "stars",
+        "surprised",
+        "sleepy",
+        "sparkle",
+        "aura"
+      ]
+    },
+    {
+      "id": "magical-awakening-calm-after",
+      "title": "Magical Awakening — Calm After",
+      "sequence": [
+        "sleepy",
+        "sleepy",
+        "sparkle",
+        "aura",
+        "stars"
+      ]
+    },
+    {
+      "id": "magical-awakening-encore",
+      "title": "Magical Awakening — Encore",
+      "sequence": [
+        "sparkle",
+        "sparkle",
+        "aura",
+        "stars",
+        "sleepy"
+      ]
+    },
+    {
+      "id": "speed-dash-opening",
+      "title": "Speed Dash — Opening",
+      "sequence": [
+        "look-left",
+        "neutral",
+        "dash",
+        "focused",
+        "look-right"
+      ]
+    },
+    {
+      "id": "speed-dash-build-up",
+      "title": "Speed Dash — Build-up",
+      "sequence": [
+        "dash",
+        "focused",
+        "focused",
+        "look-right",
+        "look-left"
+      ]
+    },
+    {
+      "id": "speed-dash-climax",
+      "title": "Speed Dash — Climax",
+      "sequence": [
+        "focused",
+        "power",
+        "look-right",
+        "look-left",
+        "dash"
+      ],
+      "gif": "assets/gifs/speed-dash.gif",
+      "animation_frames": [
+        "assets/animation-frames/speed-dash/00.svg",
+        "assets/animation-frames/speed-dash/01.svg",
+        "assets/animation-frames/speed-dash/02.svg",
+        "assets/animation-frames/speed-dash/03.svg",
+        "assets/animation-frames/speed-dash/04.svg",
+        "assets/animation-frames/speed-dash/05.svg",
+        "assets/animation-frames/speed-dash/06.svg",
+        "assets/animation-frames/speed-dash/07.svg"
+      ]
+    },
+    {
+      "id": "speed-dash-reaction",
+      "title": "Speed Dash — Reaction",
+      "sequence": [
+        "look-right",
+        "surprised",
+        "look-left",
+        "dash",
+        "focused"
+      ]
+    },
+    {
+      "id": "speed-dash-calm-after",
+      "title": "Speed Dash — Calm After",
+      "sequence": [
+        "look-left",
+        "sleepy",
+        "dash",
+        "focused",
+        "look-right"
+      ]
+    },
+    {
+      "id": "speed-dash-encore",
+      "title": "Speed Dash — Encore",
+      "sequence": [
+        "dash",
+        "sparkle",
+        "focused",
+        "look-right",
+        "look-left"
+      ]
+    },
+    {
+      "id": "tearful-courage-opening",
+      "title": "Tearful Courage — Opening",
+      "sequence": [
+        "sad",
+        "neutral",
+        "teary",
+        "focused",
+        "happy"
+      ]
+    },
+    {
+      "id": "tearful-courage-build-up",
+      "title": "Tearful Courage — Build-up",
+      "sequence": [
+        "teary",
+        "focused",
+        "focused",
+        "happy",
+        "sad"
+      ]
+    },
+    {
+      "id": "tearful-courage-climax",
+      "title": "Tearful Courage — Climax",
+      "sequence": [
+        "focused",
+        "power",
+        "happy",
+        "sad",
+        "teary"
+      ],
+      "gif": "assets/gifs/tearful-courage.gif",
+      "animation_frames": [
+        "assets/animation-frames/tearful-courage/00.svg",
+        "assets/animation-frames/tearful-courage/01.svg",
+        "assets/animation-frames/tearful-courage/02.svg",
+        "assets/animation-frames/tearful-courage/03.svg",
+        "assets/animation-frames/tearful-courage/04.svg",
+        "assets/animation-frames/tearful-courage/05.svg",
+        "assets/animation-frames/tearful-courage/06.svg",
+        "assets/animation-frames/tearful-courage/07.svg"
+      ]
+    },
+    {
+      "id": "tearful-courage-reaction",
+      "title": "Tearful Courage — Reaction",
+      "sequence": [
+        "happy",
+        "surprised",
+        "sad",
+        "teary",
+        "focused"
+      ]
+    },
+    {
+      "id": "tearful-courage-calm-after",
+      "title": "Tearful Courage — Calm After",
+      "sequence": [
+        "sad",
+        "sleepy",
+        "teary",
+        "focused",
+        "happy"
+      ]
+    },
+    {
+      "id": "tearful-courage-encore",
+      "title": "Tearful Courage — Encore",
+      "sequence": [
+        "teary",
+        "sparkle",
+        "focused",
+        "happy",
+        "sad"
+      ]
+    },
+    {
+      "id": "villain-smirk-opening",
+      "title": "Villain Smirk — Opening",
+      "sequence": [
+        "look-right",
+        "neutral",
+        "smirk",
+        "angry",
+        "wink"
+      ]
+    },
+    {
+      "id": "villain-smirk-build-up",
+      "title": "Villain Smirk — Build-up",
+      "sequence": [
+        "smirk",
+        "focused",
+        "angry",
+        "wink",
+        "look-right"
+      ]
+    },
+    {
+      "id": "villain-smirk-climax",
+      "title": "Villain Smirk — Climax",
+      "sequence": [
+        "angry",
+        "power",
+        "wink",
+        "look-right",
+        "smirk"
+      ]
+    },
+    {
+      "id": "villain-smirk-reaction",
+      "title": "Villain Smirk — Reaction",
+      "sequence": [
+        "wink",
+        "surprised",
+        "look-right",
+        "smirk",
+        "angry"
+      ]
+    },
+    {
+      "id": "villain-smirk-calm-after",
+      "title": "Villain Smirk — Calm After",
+      "sequence": [
+        "look-right",
+        "sleepy",
+        "smirk",
+        "angry",
+        "wink"
+      ]
+    },
+    {
+      "id": "villain-smirk-encore",
+      "title": "Villain Smirk — Encore",
+      "sequence": [
+        "smirk",
+        "sparkle",
+        "angry",
+        "wink",
+        "look-right"
+      ]
+    },
+    {
+      "id": "festival-joy-opening",
+      "title": "Festival Joy — Opening",
+      "sequence": [
+        "happy",
+        "neutral",
+        "confetti",
+        "stars",
+        "love"
+      ]
+    },
+    {
+      "id": "festival-joy-build-up",
+      "title": "Festival Joy — Build-up",
+      "sequence": [
+        "confetti",
+        "focused",
+        "stars",
+        "love",
+        "happy"
+      ]
+    },
+    {
+      "id": "festival-joy-climax",
+      "title": "Festival Joy — Climax",
+      "sequence": [
+        "stars",
+        "power",
+        "love",
+        "happy",
+        "confetti"
+      ],
+      "gif": "assets/gifs/festival-joy.gif",
+      "animation_frames": [
+        "assets/animation-frames/festival-joy/00.svg",
+        "assets/animation-frames/festival-joy/01.svg",
+        "assets/animation-frames/festival-joy/02.svg",
+        "assets/animation-frames/festival-joy/03.svg",
+        "assets/animation-frames/festival-joy/04.svg",
+        "assets/animation-frames/festival-joy/05.svg",
+        "assets/animation-frames/festival-joy/06.svg",
+        "assets/animation-frames/festival-joy/07.svg"
+      ]
+    },
+    {
+      "id": "festival-joy-reaction",
+      "title": "Festival Joy — Reaction",
+      "sequence": [
+        "love",
+        "surprised",
+        "happy",
+        "confetti",
+        "stars"
+      ]
+    },
+    {
+      "id": "festival-joy-calm-after",
+      "title": "Festival Joy — Calm After",
+      "sequence": [
+        "happy",
+        "sleepy",
+        "confetti",
+        "stars",
+        "love"
+      ]
+    },
+    {
+      "id": "festival-joy-encore",
+      "title": "Festival Joy — Encore",
+      "sequence": [
+        "confetti",
+        "sparkle",
+        "stars",
+        "love",
+        "happy"
+      ]
+    },
+    {
+      "id": "snack-bliss-opening",
+      "title": "Snack Bliss — Opening",
+      "sequence": [
+        "surprised",
+        "neutral",
+        "happy",
+        "sleepy",
+        "love"
+      ]
+    },
+    {
+      "id": "snack-bliss-build-up",
+      "title": "Snack Bliss — Build-up",
+      "sequence": [
+        "happy",
+        "focused",
+        "sleepy",
+        "love",
+        "surprised"
+      ]
+    },
+    {
+      "id": "snack-bliss-climax",
+      "title": "Snack Bliss — Climax",
+      "sequence": [
+        "sleepy",
+        "power",
+        "love",
+        "surprised",
+        "happy"
+      ]
+    },
+    {
+      "id": "snack-bliss-reaction",
+      "title": "Snack Bliss — Reaction",
+      "sequence": [
+        "love",
+        "surprised",
+        "surprised",
+        "happy",
+        "sleepy"
+      ]
+    },
+    {
+      "id": "snack-bliss-calm-after",
+      "title": "Snack Bliss — Calm After",
+      "sequence": [
+        "surprised",
+        "sleepy",
+        "happy",
+        "sleepy",
+        "love"
+      ]
+    },
+    {
+      "id": "snack-bliss-encore",
+      "title": "Snack Bliss — Encore",
+      "sequence": [
+        "happy",
+        "sparkle",
+        "sleepy",
+        "love",
+        "surprised"
+      ]
+    },
+    {
+      "id": "rain-melancholy-opening",
+      "title": "Rain Melancholy — Opening",
+      "sequence": [
+        "neutral",
+        "neutral",
+        "sad",
+        "teary",
+        "sleepy"
+      ]
+    },
+    {
+      "id": "rain-melancholy-build-up",
+      "title": "Rain Melancholy — Build-up",
+      "sequence": [
+        "sad",
+        "focused",
+        "teary",
+        "sleepy",
+        "neutral"
+      ]
+    },
+    {
+      "id": "rain-melancholy-climax",
+      "title": "Rain Melancholy — Climax",
+      "sequence": [
+        "teary",
+        "power",
+        "sleepy",
+        "neutral",
+        "sad"
+      ],
+      "gif": "assets/gifs/rain-melancholy.gif",
+      "animation_frames": [
+        "assets/animation-frames/rain-melancholy/00.svg",
+        "assets/animation-frames/rain-melancholy/01.svg",
+        "assets/animation-frames/rain-melancholy/02.svg",
+        "assets/animation-frames/rain-melancholy/03.svg",
+        "assets/animation-frames/rain-melancholy/04.svg",
+        "assets/animation-frames/rain-melancholy/05.svg",
+        "assets/animation-frames/rain-melancholy/06.svg",
+        "assets/animation-frames/rain-melancholy/07.svg"
+      ]
+    },
+    {
+      "id": "rain-melancholy-reaction",
+      "title": "Rain Melancholy — Reaction",
+      "sequence": [
+        "sleepy",
+        "surprised",
+        "neutral",
+        "sad",
+        "teary"
+      ]
+    },
+    {
+      "id": "rain-melancholy-calm-after",
+      "title": "Rain Melancholy — Calm After",
+      "sequence": [
+        "neutral",
+        "sleepy",
+        "sad",
+        "teary",
+        "sleepy"
+      ]
+    },
+    {
+      "id": "rain-melancholy-encore",
+      "title": "Rain Melancholy — Encore",
+      "sequence": [
+        "sad",
+        "sparkle",
+        "teary",
+        "sleepy",
+        "neutral"
+      ]
+    },
+    {
+      "id": "cosmic-wonder-opening",
+      "title": "Cosmic Wonder — Opening",
+      "sequence": [
+        "surprised",
+        "neutral",
+        "sparkle",
+        "stars",
+        "aura"
+      ]
+    },
+    {
+      "id": "cosmic-wonder-build-up",
+      "title": "Cosmic Wonder — Build-up",
+      "sequence": [
+        "sparkle",
+        "focused",
+        "stars",
+        "aura",
+        "surprised"
+      ]
+    },
+    {
+      "id": "cosmic-wonder-climax",
+      "title": "Cosmic Wonder — Climax",
+      "sequence": [
+        "stars",
+        "power",
+        "aura",
+        "surprised",
+        "sparkle"
+      ],
+      "gif": "assets/gifs/cosmic-wonder.gif",
+      "animation_frames": [
+        "assets/animation-frames/cosmic-wonder/00.svg",
+        "assets/animation-frames/cosmic-wonder/01.svg",
+        "assets/animation-frames/cosmic-wonder/02.svg",
+        "assets/animation-frames/cosmic-wonder/03.svg",
+        "assets/animation-frames/cosmic-wonder/04.svg",
+        "assets/animation-frames/cosmic-wonder/05.svg",
+        "assets/animation-frames/cosmic-wonder/06.svg",
+        "assets/animation-frames/cosmic-wonder/07.svg"
+      ]
+    },
+    {
+      "id": "cosmic-wonder-reaction",
+      "title": "Cosmic Wonder — Reaction",
+      "sequence": [
+        "aura",
+        "surprised",
+        "surprised",
+        "sparkle",
+        "stars"
+      ]
+    },
+    {
+      "id": "cosmic-wonder-calm-after",
+      "title": "Cosmic Wonder — Calm After",
+      "sequence": [
+        "surprised",
+        "sleepy",
+        "sparkle",
+        "stars",
+        "aura"
+      ]
+    },
+    {
+      "id": "cosmic-wonder-encore",
+      "title": "Cosmic Wonder — Encore",
+      "sequence": [
+        "sparkle",
+        "sparkle",
+        "stars",
+        "aura",
+        "surprised"
+      ]
+    },
+    {
+      "id": "determined-comeback-opening",
+      "title": "Determined Comeback — Opening",
+      "sequence": [
+        "sad",
+        "neutral",
+        "blink",
+        "focused",
+        "power"
+      ]
+    },
+    {
+      "id": "determined-comeback-build-up",
+      "title": "Determined Comeback — Build-up",
+      "sequence": [
+        "blink",
+        "focused",
+        "focused",
+        "power",
+        "sad"
+      ]
+    },
+    {
+      "id": "determined-comeback-climax",
+      "title": "Determined Comeback — Climax",
+      "sequence": [
+        "focused",
+        "power",
+        "power",
+        "sad",
+        "blink"
+      ]
+    },
+    {
+      "id": "determined-comeback-reaction",
+      "title": "Determined Comeback — Reaction",
+      "sequence": [
+        "power",
+        "surprised",
+        "sad",
+        "blink",
+        "focused"
+      ]
+    },
+    {
+      "id": "determined-comeback-calm-after",
+      "title": "Determined Comeback — Calm After",
+      "sequence": [
+        "sad",
+        "sleepy",
+        "blink",
+        "focused",
+        "power"
+      ]
+    },
+    {
+      "id": "determined-comeback-encore",
+      "title": "Determined Comeback — Encore",
+      "sequence": [
+        "blink",
+        "sparkle",
+        "focused",
+        "power",
+        "sad"
+      ]
+    },
+    {
+      "id": "sleepy-episode-opening",
+      "title": "Sleepy Episode — Opening",
+      "sequence": [
+        "neutral",
+        "neutral",
+        "blink",
+        "sleepy",
+        "sleepy"
+      ]
+    },
+    {
+      "id": "sleepy-episode-build-up",
+      "title": "Sleepy Episode — Build-up",
+      "sequence": [
+        "blink",
+        "focused",
+        "sleepy",
+        "sleepy",
+        "neutral"
+      ]
+    },
+    {
+      "id": "sleepy-episode-climax",
+      "title": "Sleepy Episode — Climax",
+      "sequence": [
+        "sleepy",
+        "power",
+        "sleepy",
+        "neutral",
+        "blink"
+      ]
+    },
+    {
+      "id": "sleepy-episode-reaction",
+      "title": "Sleepy Episode — Reaction",
+      "sequence": [
+        "sleepy",
+        "surprised",
+        "neutral",
+        "blink",
+        "sleepy"
+      ]
+    },
+    {
+      "id": "sleepy-episode-calm-after",
+      "title": "Sleepy Episode — Calm After",
+      "sequence": [
+        "neutral",
+        "sleepy",
+        "blink",
+        "sleepy",
+        "sleepy"
+      ]
+    },
+    {
+      "id": "sleepy-episode-encore",
+      "title": "Sleepy Episode — Encore",
+      "sequence": [
+        "blink",
+        "sparkle",
+        "sleepy",
+        "sleepy",
+        "neutral"
+      ]
+    }
+  ]
+}

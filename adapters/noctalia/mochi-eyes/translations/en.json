@@ -1,0 +1,38 @@
+{
+  "settings": {
+    "audio_spectrum": {
+      "label": "React to music",
+      "description": "Makes Mochi smile on strong audio beats."
+    },
+    "activity_awareness": {
+      "label": "React to focused app",
+      "description": "Reads only the Niri focused window title and app ID locally."
+    },
+    "animation_speed": {
+      "label": "Energy",
+      "description": "Controls how often Mochi blinks and changes expression.",
+      "options": {
+        "calm": "Calm",
+        "lively": "Lively",
+        "hyper": "Hyper"
+      }
+    },
+    "anime_moments": {
+      "label": "Anime-inspired moments",
+      "description": "Lets Mochi choose from 120 original dramatic, funny, cozy, and heroic eye animations."
+    },
+    "gif_moments": {
+      "label": "Animated GIF moments",
+      "description": "Occasionally plays an original low-resolution GIF from Mochi's bundled animation pack."
+    },
+    "moment_frequency": {
+      "label": "Moment frequency",
+      "description": "Controls how often Mochi chooses a cinematic moment by himself.",
+      "options": {
+        "calm": "Calm",
+        "balanced": "Balanced",
+        "frequent": "Frequent"
+      }
+    }
+  }
+}

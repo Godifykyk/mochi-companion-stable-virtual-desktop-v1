@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Mochi Companion
+Comment=White-and-blue animated robot eyes
+Exec=mochi-companion
+Icon=face-smile
+Terminal=false
+Categories=Utility;

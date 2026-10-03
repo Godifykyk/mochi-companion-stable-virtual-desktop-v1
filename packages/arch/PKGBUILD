@@ -1,0 +1,17 @@
+pkgname=mochi-companion
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='White-and-blue animated desktop companion for Linux'
+arch=('any')
+url='https://github.com/your-name/mochi-companion'
+license=('MIT')
+depends=('python' 'python-gobject' 'gtk3' 'gtk-layer-shell')
+optdepends=('wmctrl: X11 smart hide' 'kdotool: KDE Wayland smart hide')
+source=("$pkgname-$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+package() {
+  install -Dm755 "$srcdir/$pkgname-$pkgver/portable/mochi_companion.py" "$pkgdir/usr/bin/mochi-companion"
+  install -Dm644 "$srcdir/$pkgname-$pkgver/shared/anime_modes.json" "$pkgdir/usr/share/mochi-companion/shared/anime_modes.json"
+  install -Dm644 "$srcdir/$pkgname-$pkgver/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

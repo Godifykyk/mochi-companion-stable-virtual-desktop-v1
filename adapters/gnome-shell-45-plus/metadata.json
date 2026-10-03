@@ -1,0 +1,8 @@
+{
+  "uuid": "mochi-companion@local.github.io",
+  "name": "Mochi Companion",
+  "description": "White-and-blue animated robot eyes with 120 original moods",
+  "version": 1,
+  "shell-version": ["45", "46", "47", "48", "49", "50", "51"],
+  "url": "https://github.com/your-name/mochi-companion"
+}

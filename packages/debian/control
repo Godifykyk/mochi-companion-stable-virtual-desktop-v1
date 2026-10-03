@@ -1,0 +1,15 @@
+Source: mochi-companion
+Section: utils
+Priority: optional
+Maintainer: Your Name <you@example.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.0
+Homepage: https://github.com/your-name/mochi-companion
+Rules-Requires-Root: no
+
+Package: mochi-companion
+Architecture: all
+Depends: python3, python3-gi, gir1.2-gtk-3.0, gir1.2-gtklayershell-0.1, ${misc:Depends}
+Recommends: wmctrl
+Description: white-and-blue animated desktop companion
+ Lightweight animated robot eyes with portable and desktop-native adapters.

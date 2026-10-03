@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="36" viewBox="0 0 220 36">
+<rect width="220" height="36" rx="12" fill="#000000"/>
+<g transform="translate(110 18) scale(1.0) translate(-110 -18)"><polygon points="49,11 85,5 80,28 54,28" fill="#53C7FF"/><polygon points="135,5 171,11 166,28 140,28" fill="#53C7FF"/></g><path d="M 16 18 L 30 13 M 190 13 L 204 18 M 18 28 L 34 25 M 186 25 L 202 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+</svg>

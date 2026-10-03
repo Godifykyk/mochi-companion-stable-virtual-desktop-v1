@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="36" viewBox="0 0 220 36">
+<rect width="220" height="36" rx="12" fill="#000000"/>
+<g transform="translate(110 18) scale(1.0) translate(-110 -18)"><ellipse cx="67" cy="18" rx="7" ry="11" fill="#FFFFFF"/><ellipse cx="45" cy="27" rx="7" ry="3" fill="#53C7FF" opacity=".65"/><ellipse cx="153" cy="18" rx="7" ry="11" fill="#FFFFFF"/><ellipse cx="175" cy="27" rx="7" ry="3" fill="#53C7FF" opacity=".65"/></g>
+</svg>

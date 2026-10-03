@@ -1,0 +1,14 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": {
+    "Id": "io.github.mochi.companion",
+    "Name": "Mochi Companion",
+    "Description": "White-and-blue animated robot eyes with 120 moods",
+    "Version": "1.0.0",
+    "License": "MIT",
+    "Authors": [{"Name": "Mochi Companion contributors"}],
+    "Category": "Fun and Games",
+    "Icon": "face-smile"
+  },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

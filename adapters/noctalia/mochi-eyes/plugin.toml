@@ -1,0 +1,69 @@
+id = "kanha/mochi-eyes"
+name = "Mochi Eyes"
+version = "1.0.0"
+plugin_api = 32
+author = "kanha"
+license = "MIT"
+dependencies = []
+icon = "sparkles"
+description = "A tiny Dasai Mochi-inspired expressive robot that lives in the Noctalia bar."
+tags = ["fun", "animation", "companion", "bar"]
+
+[[widget]]
+id = "eyes"
+entry = "mochi.luau"
+
+  [[widget.setting]]
+  key = "audio_spectrum"
+  type = "bool"
+  label_key = "settings.audio_spectrum.label"
+  description_key = "settings.audio_spectrum.description"
+  default = false
+
+  [[widget.setting]]
+  key = "activity_awareness"
+  type = "bool"
+  label_key = "settings.activity_awareness.label"
+  description_key = "settings.activity_awareness.description"
+  default = true
+
+  [[widget.setting]]
+  key = "animation_speed"
+  type = "select"
+  label_key = "settings.animation_speed.label"
+  description_key = "settings.animation_speed.description"
+  default = "lively"
+  options = [
+    { value = "calm", label_key = "settings.animation_speed.options.calm" },
+    { value = "lively", label_key = "settings.animation_speed.options.lively" },
+    { value = "hyper", label_key = "settings.animation_speed.options.hyper" },
+  ]
+
+  [[widget.setting]]
+  key = "anime_moments"
+  type = "bool"
+  label_key = "settings.anime_moments.label"
+  description_key = "settings.anime_moments.description"
+  default = true
+
+  [[widget.setting]]
+  key = "gif_moments"
+  type = "bool"
+  label_key = "settings.gif_moments.label"
+  description_key = "settings.gif_moments.description"
+  default = true
+
+  [[widget.setting]]
+  key = "moment_frequency"
+  type = "select"
+  label_key = "settings.moment_frequency.label"
+  description_key = "settings.moment_frequency.description"
+  default = "balanced"
+  options = [
+    { value = "calm", label_key = "settings.moment_frequency.options.calm" },
+    { value = "balanced", label_key = "settings.moment_frequency.options.balanced" },
+    { value = "frequent", label_key = "settings.moment_frequency.options.frequent" },
+  ]
+
+  [widget.actions]
+  middle = "none"

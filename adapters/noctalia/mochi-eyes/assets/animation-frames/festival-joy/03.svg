@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="36" viewBox="0 0 220 36">
+<rect width="220" height="36" rx="12" fill="#000000"/>
+<g transform="translate(110 18) scale(1.0) translate(-110 -18)"><path d="M 67 29 C 40 13 54 1 67 11 C 80 1 94 13 67 29 Z" fill="#53C7FF"/><path d="M 153 29 C 126 13 140 1 153 11 C 166 1 180 13 153 29 Z" fill="#53C7FF"/></g><path d="M 16 18 L 30 13 M 190 13 L 204 18 M 18 28 L 34 25 M 186 25 L 202 28" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+</svg>
