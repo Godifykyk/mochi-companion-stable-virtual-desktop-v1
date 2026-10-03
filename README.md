@@ -4,7 +4,13 @@ An eyes-only Linux desktop companion with 120 original anime-inspired moods, twe
 
 ## Mochi preview
 
+### Screenshot
+
 ![Mochi Companion showing its happy expression](docs/images/mochi-preview.png)
+
+### Short animated demo
+
+![Mochi cycling through several animated expressions](docs/images/mochi-demo.gif)
 
 ## Features
 
