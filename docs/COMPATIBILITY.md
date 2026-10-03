@@ -13,12 +13,12 @@ Status definitions:
 | Hyprland | Portable GTK | Native layer-shell placement | `hyprctl` active-workspace clients |
 | Niri | Noctalia or Portable GTK | Native shell plugin / layer-shell | Noctalia smart hide or `niri msg` |
 | Sway | Portable GTK | Native layer-shell placement | `swaymsg` tree/workspace metadata |
-| KDE Plasma 6 | Plasma widget | Native panel widget | Use Plasma panel auto-hide; portable mode can use `kdotool` |
+| KDE Plasma 6 | Plasma widget | Native panel widget | Use Plasma panel auto-hide; portable smart-hide works on KDE X11 only |
 | GNOME 45+ | GNOME extension | Native top-panel indicator | Follows GNOME panel behavior; generic Wayland overlay is limited |
 | Xfce | Portable GTK | X11 overlay | `wmctrl` |
 | Cinnamon | Portable GTK | X11 overlay | `wmctrl` |
 | MATE | Portable GTK | X11 overlay | `wmctrl` |
-| LXQt | Portable GTK | X11/KWin overlay | `wmctrl` or optional `kdotool` |
+| LXQt | Portable GTK | X11/KWin overlay | `wmctrl` on X11; Wayland smart-hide is unavailable |
 | Budgie | Portable GTK | Usually X11 overlay | `wmctrl`; Wayland placement depends on compositor |
 | COSMIC | Portable GTK | Limited fallback | Window metadata support is not guaranteed |
 
@@ -41,4 +41,4 @@ KDE Plasma 5 can use the portable adapter; the bundled plasmoid targets Plasma 6
 
 ## Validation status
 
-The release tree is tested in isolation for Python syntax, smoke-test behavior, shell syntax, JSON manifests, catalog integrity, color restrictions, and file completeness. It is not claimed as runtime-verified on every desktop or distribution. Cross-desktop runtime checks belong in VMs/CI images before publishing binaries.
+The release tree is tested in isolation for Python syntax, smoke-test behavior, shell syntax, JSON manifests, catalog integrity, color restrictions, installer rollback/upgrade behavior, active-workspace filtering, and file completeness. It is not claimed as runtime-verified on every desktop or distribution. Cross-desktop runtime checks belong in VMs/CI images before publishing binaries.

@@ -16,7 +16,7 @@ Smart-hide command helpers are optional:
 - Hyprland: `hyprctl` from Hyprland.
 - Niri: `niri msg` from Niri.
 - Sway: `swaymsg` from Sway.
-- KDE Wayland portable mode: `kdotool`; use the Plasma widget when possible.
+- KDE X11 portable mode: `wmctrl`; use the Plasma widget on KDE Wayland.
 - X11 desktops: `wmctrl`.
 
 ## Install

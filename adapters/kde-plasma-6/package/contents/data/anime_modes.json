@@ -153,17 +153,6 @@
         "rage",
         "focused",
         "power"
-      ],
-      "gif": "assets/gifs/power-surge.gif",
-      "animation_frames": [
-        "assets/animation-frames/power-surge/00.svg",
-        "assets/animation-frames/power-surge/01.svg",
-        "assets/animation-frames/power-surge/02.svg",
-        "assets/animation-frames/power-surge/03.svg",
-        "assets/animation-frames/power-surge/04.svg",
-        "assets/animation-frames/power-surge/05.svg",
-        "assets/animation-frames/power-surge/06.svg",
-        "assets/animation-frames/power-surge/07.svg"
       ]
     },
     {
@@ -230,17 +219,6 @@
         "power",
         "sad",
         "focused"
-      ],
-      "gif": "assets/gifs/final-stand.gif",
-      "animation_frames": [
-        "assets/animation-frames/final-stand/00.svg",
-        "assets/animation-frames/final-stand/01.svg",
-        "assets/animation-frames/final-stand/02.svg",
-        "assets/animation-frames/final-stand/03.svg",
-        "assets/animation-frames/final-stand/04.svg",
-        "assets/animation-frames/final-stand/05.svg",
-        "assets/animation-frames/final-stand/06.svg",
-        "assets/animation-frames/final-stand/07.svg"
       ]
     },
     {
@@ -373,17 +351,6 @@
         "blink",
         "surprised",
         "comedy"
-      ],
-      "gif": "assets/gifs/comedy-panic.gif",
-      "animation_frames": [
-        "assets/animation-frames/comedy-panic/00.svg",
-        "assets/animation-frames/comedy-panic/01.svg",
-        "assets/animation-frames/comedy-panic/02.svg",
-        "assets/animation-frames/comedy-panic/03.svg",
-        "assets/animation-frames/comedy-panic/04.svg",
-        "assets/animation-frames/comedy-panic/05.svg",
-        "assets/animation-frames/comedy-panic/06.svg",
-        "assets/animation-frames/comedy-panic/07.svg"
       ]
     },
     {
@@ -450,17 +417,6 @@
         "love",
         "shy",
         "happy"
-      ],
-      "gif": "assets/gifs/friendship-spark.gif",
-      "animation_frames": [
-        "assets/animation-frames/friendship-spark/00.svg",
-        "assets/animation-frames/friendship-spark/01.svg",
-        "assets/animation-frames/friendship-spark/02.svg",
-        "assets/animation-frames/friendship-spark/03.svg",
-        "assets/animation-frames/friendship-spark/04.svg",
-        "assets/animation-frames/friendship-spark/05.svg",
-        "assets/animation-frames/friendship-spark/06.svg",
-        "assets/animation-frames/friendship-spark/07.svg"
       ]
     },
     {
@@ -527,17 +483,6 @@
         "confetti",
         "focused",
         "happy"
-      ],
-      "gif": "assets/gifs/victory-pose.gif",
-      "animation_frames": [
-        "assets/animation-frames/victory-pose/00.svg",
-        "assets/animation-frames/victory-pose/01.svg",
-        "assets/animation-frames/victory-pose/02.svg",
-        "assets/animation-frames/victory-pose/03.svg",
-        "assets/animation-frames/victory-pose/04.svg",
-        "assets/animation-frames/victory-pose/05.svg",
-        "assets/animation-frames/victory-pose/06.svg",
-        "assets/animation-frames/victory-pose/07.svg"
       ]
     },
     {
@@ -670,17 +615,6 @@
         "dizzy",
         "neutral",
         "surprised"
-      ],
-      "gif": "assets/gifs/sudden-shock.gif",
-      "animation_frames": [
-        "assets/animation-frames/sudden-shock/00.svg",
-        "assets/animation-frames/sudden-shock/01.svg",
-        "assets/animation-frames/sudden-shock/02.svg",
-        "assets/animation-frames/sudden-shock/03.svg",
-        "assets/animation-frames/sudden-shock/04.svg",
-        "assets/animation-frames/sudden-shock/05.svg",
-        "assets/animation-frames/sudden-shock/06.svg",
-        "assets/animation-frames/sudden-shock/07.svg"
       ]
     },
     {
@@ -879,17 +813,6 @@
         "stars",
         "sleepy",
         "sparkle"
-      ],
-      "gif": "assets/gifs/magical-awakening.gif",
-      "animation_frames": [
-        "assets/animation-frames/magical-awakening/00.svg",
-        "assets/animation-frames/magical-awakening/01.svg",
-        "assets/animation-frames/magical-awakening/02.svg",
-        "assets/animation-frames/magical-awakening/03.svg",
-        "assets/animation-frames/magical-awakening/04.svg",
-        "assets/animation-frames/magical-awakening/05.svg",
-        "assets/animation-frames/magical-awakening/06.svg",
-        "assets/animation-frames/magical-awakening/07.svg"
       ]
     },
     {
@@ -956,17 +879,6 @@
         "look-right",
         "look-left",
         "dash"
-      ],
-      "gif": "assets/gifs/speed-dash.gif",
-      "animation_frames": [
-        "assets/animation-frames/speed-dash/00.svg",
-        "assets/animation-frames/speed-dash/01.svg",
-        "assets/animation-frames/speed-dash/02.svg",
-        "assets/animation-frames/speed-dash/03.svg",
-        "assets/animation-frames/speed-dash/04.svg",
-        "assets/animation-frames/speed-dash/05.svg",
-        "assets/animation-frames/speed-dash/06.svg",
-        "assets/animation-frames/speed-dash/07.svg"
       ]
     },
     {
@@ -1033,17 +945,6 @@
         "happy",
         "sad",
         "teary"
-      ],
-      "gif": "assets/gifs/tearful-courage.gif",
-      "animation_frames": [
-        "assets/animation-frames/tearful-courage/00.svg",
-        "assets/animation-frames/tearful-courage/01.svg",
-        "assets/animation-frames/tearful-courage/02.svg",
-        "assets/animation-frames/tearful-courage/03.svg",
-        "assets/animation-frames/tearful-courage/04.svg",
-        "assets/animation-frames/tearful-courage/05.svg",
-        "assets/animation-frames/tearful-courage/06.svg",
-        "assets/animation-frames/tearful-courage/07.svg"
       ]
     },
     {
@@ -1176,17 +1077,6 @@
         "love",
         "happy",
         "confetti"
-      ],
-      "gif": "assets/gifs/festival-joy.gif",
-      "animation_frames": [
-        "assets/animation-frames/festival-joy/00.svg",
-        "assets/animation-frames/festival-joy/01.svg",
-        "assets/animation-frames/festival-joy/02.svg",
-        "assets/animation-frames/festival-joy/03.svg",
-        "assets/animation-frames/festival-joy/04.svg",
-        "assets/animation-frames/festival-joy/05.svg",
-        "assets/animation-frames/festival-joy/06.svg",
-        "assets/animation-frames/festival-joy/07.svg"
       ]
     },
     {
@@ -1319,17 +1209,6 @@
         "sleepy",
         "neutral",
         "sad"
-      ],
-      "gif": "assets/gifs/rain-melancholy.gif",
-      "animation_frames": [
-        "assets/animation-frames/rain-melancholy/00.svg",
-        "assets/animation-frames/rain-melancholy/01.svg",
-        "assets/animation-frames/rain-melancholy/02.svg",
-        "assets/animation-frames/rain-melancholy/03.svg",
-        "assets/animation-frames/rain-melancholy/04.svg",
-        "assets/animation-frames/rain-melancholy/05.svg",
-        "assets/animation-frames/rain-melancholy/06.svg",
-        "assets/animation-frames/rain-melancholy/07.svg"
       ]
     },
     {
@@ -1396,17 +1275,6 @@
         "aura",
         "surprised",
         "sparkle"
-      ],
-      "gif": "assets/gifs/cosmic-wonder.gif",
-      "animation_frames": [
-        "assets/animation-frames/cosmic-wonder/00.svg",
-        "assets/animation-frames/cosmic-wonder/01.svg",
-        "assets/animation-frames/cosmic-wonder/02.svg",
-        "assets/animation-frames/cosmic-wonder/03.svg",
-        "assets/animation-frames/cosmic-wonder/04.svg",
-        "assets/animation-frames/cosmic-wonder/05.svg",
-        "assets/animation-frames/cosmic-wonder/06.svg",
-        "assets/animation-frames/cosmic-wonder/07.svg"
       ]
     },
     {

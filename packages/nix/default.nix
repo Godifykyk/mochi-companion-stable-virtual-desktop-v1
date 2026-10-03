@@ -14,10 +14,11 @@ pkgs.stdenvNoCC.mkDerivation {
   ];
 
   installPhase = ''
-    mkdir -p $out/bin $out/share/mochi-companion/shared
+    mkdir -p $out/bin $out/share/mochi-companion/shared $out/share/applications
     cp portable/mochi_companion.py $out/bin/mochi-companion
     chmod +x $out/bin/mochi-companion
     cp shared/anime_modes.json $out/share/mochi-companion/shared/
+    cp packages/common/io.github.mochi.Companion.desktop $out/share/applications/
     wrapProgram $out/bin/mochi-companion \
       --set MOCHI_DATA_DIR $out/share/mochi-companion/shared \
       --prefix GI_TYPELIB_PATH : ${pkgs.lib.makeSearchPath "lib/girepository-1.0" [ pkgs.gtk3 pkgs.gtk-layer-shell ]}

@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+
+override_dh_auto_test:
+	python3 -m unittest discover -s tests -v
+
+override_dh_auto_install:
+	install -Dm755 portable/mochi_companion.py debian/mochi-companion/usr/bin/mochi-companion
+	install -Dm644 shared/anime_modes.json debian/mochi-companion/usr/share/mochi-companion/shared/anime_modes.json
+	install -Dm644 packages/common/io.github.mochi.Companion.desktop debian/mochi-companion/usr/share/applications/io.github.mochi.Companion.desktop

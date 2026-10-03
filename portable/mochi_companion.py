@@ -11,6 +11,7 @@ import pathlib
 import random
 import subprocess
 import sys
+import threading
 import time
 from typing import Any
 
@@ -40,6 +41,42 @@ BLUE = "#53C7FF"
 BLACK = "#000000"
 
 
+class WindowOccupancyProbe:
+    """Refresh compositor state off the GTK thread and return the last result."""
+
+    def __init__(self, backend) -> None:
+        self.backend = backend
+        self.occupied = False
+        self.running = False
+        self.lock = threading.Lock()
+
+    def refresh(self) -> bool:
+        with self.lock:
+            cached = self.occupied
+            if self.running:
+                return cached
+            self.running = True
+        threading.Thread(target=self._run, name="mochi-window-probe", daemon=True).start()
+        return cached
+
+    def _run(self) -> None:
+        try:
+            occupied = bool(self.backend())
+        except Exception:
+            occupied = False
+        with self.lock:
+            self.occupied = occupied
+            self.running = False
+
+
+def advance_frame(sequence: list[str], index: int, first_frame_drawn: bool) -> tuple[int, bool]:
+    if len(sequence) <= 1:
+        return 0, True
+    if not first_frame_drawn:
+        return index, True
+    return (index + 1) % len(sequence), True
+
+
 def command_json(command: list[str]) -> Any:
     try:
         result = subprocess.run(command, capture_output=True, text=True, timeout=1.2, check=False)
@@ -48,13 +85,18 @@ def command_json(command: list[str]) -> Any:
         return None
 
 
+def is_mochi_window(window: Any) -> bool:
+    text = json.dumps(window, sort_keys=True).lower()
+    return APP_ID.lower() in text or "mochi companion" in text
+
+
 def windows_hyprland() -> bool:
     workspace = command_json(["hyprctl", "-j", "activeworkspace"])
     clients = command_json(["hyprctl", "-j", "clients"])
     if not isinstance(workspace, dict) or not isinstance(clients, list):
         return False
     workspace_id = workspace.get("id")
-    return any(c.get("workspace", {}).get("id") == workspace_id and APP_ID not in str(c) for c in clients)
+    return any(c.get("workspace", {}).get("id") == workspace_id and not is_mochi_window(c) for c in clients)
 
 
 def windows_niri() -> bool:
@@ -62,8 +104,9 @@ def windows_niri() -> bool:
     windows = command_json(["niri", "msg", "--json", "windows"])
     if not isinstance(workspaces, list) or not isinstance(windows, list):
         return False
-    active_ids = {w.get("id") for w in workspaces if w.get("is_active")}
-    return any(w.get("workspace_id") in active_ids and APP_ID not in str(w) for w in windows)
+    focused_ids = {w.get("id") for w in workspaces if w.get("is_focused")}
+    target_ids = focused_ids or {w.get("id") for w in workspaces if w.get("is_active")}
+    return any(w.get("workspace_id") in target_ids and not is_mochi_window(w) for w in windows)
 
 
 def _sway_leaves(node: dict[str, Any]) -> list[dict[str, Any]]:
@@ -96,17 +139,29 @@ def windows_sway() -> bool:
     if workspace_node is None:
         return False
     return any(
-        node.get("type") == "con" and node.get("name") and APP_ID not in json.dumps(node)
+        node.get("type") == "con"
+        and (node.get("app_id") or node.get("window_properties") or node.get("name"))
+        and not is_mochi_window(node)
         for node in _sway_leaves(workspace_node)
     )
 
 
 def windows_x11() -> bool:
     try:
-        result = subprocess.run(["wmctrl", "-l"], capture_output=True, text=True, timeout=1.0, check=False)
+        desktops = subprocess.run(["wmctrl", "-d"], capture_output=True, text=True, timeout=1.0, check=False)
+        windows = subprocess.run(["wmctrl", "-l"], capture_output=True, text=True, timeout=1.0, check=False)
     except (OSError, subprocess.TimeoutExpired):
         return False
-    return any(line.strip() and "Mochi Companion" not in line for line in result.stdout.splitlines())
+    if desktops.returncode != 0 or windows.returncode != 0:
+        return False
+    active = next((line.split()[0] for line in desktops.stdout.splitlines() if " * " in f" {line} "), None)
+    if active is None:
+        return False
+    for line in windows.stdout.splitlines():
+        fields = line.split(maxsplit=4)
+        if len(fields) >= 4 and fields[1] == active and "Mochi Companion" not in line:
+            return True
+    return False
 
 
 def windows_kwin() -> bool:
@@ -124,6 +179,8 @@ def select_window_backend():
     if os.environ.get("SWAYSOCK") or "sway" in desktop:
         return windows_sway
     if "kde" in desktop or "plasma" in desktop:
+        if os.environ.get("XDG_SESSION_TYPE", "").lower() == "x11":
+            return windows_x11
         return windows_kwin
     return windows_x11
 
@@ -155,6 +212,7 @@ def main() -> int:
     gi.require_version("Gdk", "3.0")
     gi.require_version("Gtk", "3.0")
     from gi.repository import Gdk, GLib, Gtk
+    GLib.set_prgname(APP_ID)
 
     try:
         gi.require_version("GtkLayerShell", "0.1")
@@ -166,6 +224,7 @@ def main() -> int:
     frames = catalog["frames"]
     modes = catalog["modes"]
     window_backend = select_window_backend()
+    window_probe = WindowOccupancyProbe(window_backend)
 
     class MochiWindow(Gtk.Window):
         def __init__(self) -> None:
@@ -192,14 +251,23 @@ def main() -> int:
 
             self.sequence = ["neutral"]
             self.sequence_index = 0
+            self.first_frame_drawn = False
             self.sequence_deadline = 0.0
             self.next_moment = time.monotonic() + self.delay_seconds()
             self.hidden_for_windows = False
 
-            if GtkLayerShell is not None and os.environ.get("WAYLAND_DISPLAY"):
+            if (
+                GtkLayerShell is not None
+                and os.environ.get("WAYLAND_DISPLAY")
+                and GtkLayerShell.is_supported()
+            ):
                 GtkLayerShell.init_for_window(self)
                 GtkLayerShell.set_namespace(self, APP_ID)
                 GtkLayerShell.set_layer(self, GtkLayerShell.Layer.OVERLAY)
+                display = Gdk.Display.get_default()
+                monitor = display.get_primary_monitor() if display and hasattr(display, "get_primary_monitor") else None
+                if monitor is not None and hasattr(GtkLayerShell, "set_monitor"):
+                    GtkLayerShell.set_monitor(self, monitor)
                 GtkLayerShell.set_anchor(self, GtkLayerShell.Edge.TOP, True)
                 GtkLayerShell.set_margin(self, GtkLayerShell.Edge.TOP, 8)
                 GtkLayerShell.set_exclusive_zone(self, 0)
@@ -224,6 +292,7 @@ def main() -> int:
             mode = random.choice(modes)
             self.sequence = list(mode.get("sequence") or ["neutral"])
             self.sequence_index = 0
+            self.first_frame_drawn = False
             self.sequence_deadline = time.monotonic() + max(1.2, len(self.sequence) * 0.32)
             self.next_moment = self.sequence_deadline + self.delay_seconds()
 
@@ -232,24 +301,25 @@ def main() -> int:
             if now >= self.next_moment and len(self.sequence) == 1:
                 self.choose_mode()
             if len(self.sequence) > 1:
-                self.sequence_index = (self.sequence_index + 1) % len(self.sequence)
+                self.sequence_index, self.first_frame_drawn = advance_frame(
+                    self.sequence, self.sequence_index, self.first_frame_drawn
+                )
                 if now >= self.sequence_deadline:
                     self.sequence = ["neutral"]
                     self.sequence_index = 0
+                    self.first_frame_drawn = False
             self.area.queue_draw()
             return True
 
         def smart_hide(self) -> bool:
             if args.no_smart_hide:
                 return True
-            occupied = window_backend()
+            occupied = window_probe.refresh()
             if occupied and not self.hidden_for_windows:
-                self.set_opacity(0.0)
-                self.set_sensitive(False)
+                self.hide()
                 self.hidden_for_windows = True
             elif not occupied and self.hidden_for_windows:
-                self.set_opacity(1.0)
-                self.set_sensitive(True)
+                self.show_all()
                 self.hidden_for_windows = False
             return True
 
@@ -261,7 +331,9 @@ def main() -> int:
             else:
                 self.sequence = ["focused", "rage", "angry", "neutral"]
             self.sequence_index = 0
+            self.first_frame_drawn = False
             self.sequence_deadline = time.monotonic() + 1.8
+            self.area.queue_draw()
             return True
 
         def on_draw(self, _widget, cr) -> bool:

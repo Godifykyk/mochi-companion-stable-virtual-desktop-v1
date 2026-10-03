@@ -18,12 +18,14 @@ Lightweight animated robot eyes with portable and desktop-native adapters.
 %install
 install -Dm755 portable/mochi_companion.py %{buildroot}%{_bindir}/mochi-companion
 install -Dm644 shared/anime_modes.json %{buildroot}%{_datadir}/mochi-companion/shared/anime_modes.json
+install -Dm644 packages/common/io.github.mochi.Companion.desktop %{buildroot}%{_datadir}/applications/io.github.mochi.Companion.desktop
 
 %files
 %license LICENSE
 %doc README.md docs/COMPATIBILITY.md
 %{_bindir}/mochi-companion
 %{_datadir}/mochi-companion/shared/anime_modes.json
+%{_datadir}/applications/io.github.mochi.Companion.desktop
 
 %changelog
 * Fri Oct 02 2026 Mochi Companion contributors - 1.0.0-1

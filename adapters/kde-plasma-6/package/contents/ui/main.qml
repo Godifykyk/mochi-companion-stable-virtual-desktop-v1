@@ -75,13 +75,11 @@ PlasmoidItem {
 
         MouseArea {
             anchors.fill: parent
-            acceptedButtons: Qt.AllButtons
+            acceptedButtons: Qt.LeftButton | Qt.MiddleButton
             onClicked: mouse => {
                 root.sequence = mouse.button === Qt.LeftButton
                     ? ["love", "sparkle", "love", "happy"]
-                    : mouse.button === Qt.MiddleButton
-                      ? ["blink", "sleepy", "sleepy", "neutral"]
-                      : ["focused", "rage", "angry", "neutral"]
+                    : ["blink", "sleepy", "sleepy", "neutral"]
                 root.sequenceIndex = 0
                 root.ticksRemaining = root.sequence.length
             }

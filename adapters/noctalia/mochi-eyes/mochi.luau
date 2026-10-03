@@ -65,6 +65,7 @@ local nextBlink = 2 + math.floor(math.random() * 3)
 local activityPollTicks = math.max(1, math.floor(10000 / tickMs))
 local pointerInside = false
 local audioCooldown = 0
+local stateGeneration = 0
 
 local function nextMomentDelay()
   if momentFrequency == "frequent" then return 4 + math.floor(math.random() * 5) end
@@ -86,12 +87,11 @@ local function render()
     paddingV = 0,
     minWidth = 220,
     minHeight = 36,
-    tooltip = "Mochi: " .. pretty .. " · click for love · right-click for anger · middle-click to sleep",
   }
 
   if currentFrames ~= nil then
     barWidget.render(ui.row(rowProps, {
-      ui.image({ path = currentFrames[frameIndex], width = 220, height = 36, fit = "contain", radius = 12, tooltip = pretty }),
+      ui.image({ path = currentFrames[frameIndex], width = 220, height = 36, fit = "contain", radius = 12 }),
     }))
     return
   end
@@ -116,6 +116,7 @@ end
 
 local function show(name, durationTicks, title)
   if expressions[name] == nil then name = "neutral" end
+  stateGeneration += 1
   clearMode()
   mood = name
   moodTitle = title or name
@@ -129,6 +130,7 @@ end
 
 local function activateMode(mode)
   if type(mode) ~= "table" or type(mode.sequence) ~= "table" or #mode.sequence == 0 then return false end
+  stateGeneration += 1
   currentMode = mode
   sequenceIndex = 1
   currentFrames = if gifEnabled and type(mode.animation_frames) == "table" then mode.animation_frames else nil
@@ -186,7 +188,10 @@ end
 
 local function inspectFocusedApp()
   if not activityAware or not noctalia.commandExists("niri") then return end
+  local generation = stateGeneration
   noctalia.runAsync({ "niri", "msg", "--json", "focused-window" }, function(result)
+    if generation ~= stateGeneration then return end
+    if currentMode ~= nil or temporaryTicks > 0 or pointerInside then return end
     if result.exitCode ~= 0 or result.stdout == nil then return end
     local value = noctalia.json.decode(result.stdout)
     if type(value) ~= "table" then return end
@@ -228,7 +233,8 @@ function update()
     end
   end
 
-  if currentFrames == nil and tick % activityPollTicks == 0 then inspectFocusedApp() end
+  if currentMode == nil and temporaryTicks == 0 and not pointerInside
+      and tick % activityPollTicks == 0 then inspectFocusedApp() end
 end
 
 function onHover(entered)
